@@ -1,0 +1,107 @@
+<!Doctype html>
+<html>
+<header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="CSS/css.css" rel="stylesheet">
+<link href="js/skitter.css" rel="stylesheet">
+<title> ALVIN'S WEBSITE</title>
+<script src="js/jquery-1.6.3.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.animate-colors-min.js"></script>
+  <script src="js/jquery.skitter.min.js"></script>
+
+  <script src="js/highlight.js"></script>
+
+  <script>
+        $(document).ready(function() {
+            var options = {};
+            if (document.location.search){
+                  var array = document.location.search.split('=');
+                  var param = array[0].replace('?','');
+                  var value = array[1];
+
+                  if (param == 'animation') {
+                        options.animation = value;
+                  }
+                  else if (param == 'type_navigation') {
+                        if (value == 'dots_preview') {
+                              $('.border_box').css({'marginBottom': '40px'});
+                              options['dots'] = true;
+                              options['preview'] = true
+                        }
+                        else {
+                              options[value] = true;
+                              if (value == 'dots') $('.border_box').css({'marginBottom' : '40px'});
+                        }
+                  }
+            }
+            $('.box_skitter_large').skitter(options);
+
+            $('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
+        });
+  </script>
+</header>
+<body>
+<div class="container">
+	<div class="headercont">
+		<div class="logocontABU">
+			<img src="images/walkman.png" width=190px height=180px; id="hp"></img>
+			<strong>MY WEBPLAYER</strong></div>
+		<div class="contactcontABU">
+			<div class="viewer">
+			<ul><li><a href="https://www.hitwebcounter.com" target="_blank">
+				<img src="https://hitwebcounter.com/counter/counter.php?page=9561300&style=0028&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a></li>
+				<li><img src="images/signal.png" width=30px height=30px id="dpicon"></li>
+				<li><img src="images/battery.png" width=30px height=30px id="dpicon"></li></ul></div>
+			<a href="#footercont"><img src="images/contacticon.png" width=80px;height=50px; id="contacticon"></img></a>
+		
+			</div>
+			</div>
+	
+		<div class="navcont">
+			<ul><li><a href="index.html">HOME</a></li>
+				<li><a href="services.html">SERVICES</a></li>
+				<li><a href="sources.html">SOURCES</a></li>
+				<li><a href="aboutus.html">ABOUT US</a></li>
+				<li><a href="forum.html">FORUM</a></li></ul> </div>
+		<div class="aboutus">
+		<center>
+			<p class="habu">About Webplayer</p>
+		<p class="babu">This website is a personalized webplayer that is intended to play music on the background while doing daily tasks and could still work even if there is no internet available. This webplayer is an open source where user can freely add,remove, and modify music to a library.</p>
+		
+			<p class="habu">Sources</p>
+		<p class="babu">sources gathered in this website usually came from the main sources of music or songs such as spotify and youtube. while sources to download and/or convert song files are on a free web called spotiflyer by github. This website also refers to billboard 100, spotify, and youtube recommended videos/songs as reference for most played, top hits, hot picks and most recommended songs up to date. </p>
+		
+			<p class="habu">Forum</p>
+		<p class="babu"> Forum page is a threaded page where you can find a thread intended solely for updates and patches. While there is a different thread for group discussions and a question and answer forum. Any recommendations and suggestions will also be included on this tab/page on a separate thread.</p>
+			<p class="habu">Services</p>
+		<p class="babu"> Services offered by this website are to give costumers/consumers/users the ability to design/costumize/modify their own webplayer design while they can have the option to request an editor/developer to design for them (however charges may or may not apply)</p>
+		
+			<p class="habu">About Us</p>
+		<p class="babu">
+		This website is in compliance for midterm requirement for college on the course subject "WEBPAGE DESIGN" and does not intend to copy or steal any intellectual rights or to be used as material for monetization. This is a project solely intended for complying requirements. however for future reference only the creator of this website have the rights to use this material for future projects.  </p> 
+			
+		</center>
+		</div>
+		<div class="navcontfooter">
+			<center>
+			<ul>
+				<li><a href="services.html"><img src="./images/servicesbtn.png" width=50px height=50px></a></li>
+				<li><a href="sources.html"><img src="./images/sourcesbtn.png"width=50px height=50px></a></li>
+				<li><a href="index.html"><img src="./images/homebtn.png"width=50px height=50px></a></li>
+				<li><a href="aboutus.html"><img src="./images/abubtn.png"width=50px height=50px></a></li>
+				<li><a href="forum.html"><img src="./images/forumbtn.png"width=50px height=50px></a></li></ul> </center></div>
+				
+		<div class="footer"> 
+		<center>
+		
+		<b class="copyright">Copyright 2023 by Alvin D.</b><br>
+		<p class="contact">for more info: contact this number:<b id="contact">0922xxxxxx</b></p>
+		<p class="contact">or send an email through: <b id="contact">xxxx@gmail.com</b></p>
+		</center>
+		</div>
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!Doctype html>
+<html>
+<header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="CSS/css.css" rel="stylesheet">
+<link href="js/skitter.css" rel="stylesheet">
+<title>MyWebplayer</title>
+<script src="js/jquery-1.6.3.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.animate-colors-min.js"></script>
+  <script src="js/jquery.skitter.min.js"></script>
+
+  <script src="js/highlight.js"></script>
+
+  <script>
+        $(document).ready(function() {
+            var options = {};
+            if (document.location.search){
+                  var array = document.location.search.split('=');
+                  var param = array[0].replace('?','');
+                  var value = array[1];
+
+                  if (param == 'animation') {
+                        options.animation = value;
+                  }
+                  else if (param == 'type_navigation') {
+                        if (value == 'dots_preview') {
+                              $('.border_box').css({'marginBottom': '40px'});
+                              options['dots'] = true;
+                              options['preview'] = true
+                        }
+                        else {
+                              options[value] = true;
+                              if (value == 'dots') $('.border_box').css({'marginBottom' : '40px'});
+                        }
+                  }
+            }
+            $('.box_skitter_large').skitter(options);
+
+            $('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
+        });
+  </script>
+</header>
+<body>
+<div class="container">
+	<div class="headercont">
+		<div class="logocontsrvcs">
+			<img src="images/walkman.png" width=190px height=180px; id="hp"></img>
+			<strong>MY WEBPLAYER</strong></div>
+		<div class="contactcontsrvcs">
+			<div class="viewer">
+			<ul><li><a href="https://www.hitwebcounter.com" target="_blank">
+				<img src="https://hitwebcounter.com/counter/counter.php?page=9561300&style=0028&nbdigits=5&type=page&initCount=0" title="Counter Widget" class="vc" Alt="Visit counter For Websites"   border="0" /></a></li>
+				<li><img src="images/signal.png" width=30px height=30px id="dpicon"></li>
+				<li><img src="images/battery.png" width=30px height=30px id="dpicon"></li></ul></div>
+			<a href="#footercont"><img src="images/contacticon.png" width=80px;height=50px; id="contacticon"></img></a>
+			</div>
+	</div>
+		<div class="navcont">
+			<ul><li><a href="index.html">HOME</a></li>
+				<li><a href="services.html">SERVICES</a></li>
+				<li><a href="sources.html">SOURCES</a></li>
+				<li><a href="aboutus.html">ABOUT US</a></li>
+				<li><a href="forum.html">FORUM</a></li></ul> </div>
+				
+			<div class="services"> 
+			<center>
+			<p class="hserv">REQUEST FOR SERVICE FORM</p></center>
+			<p class="label">*CONTACT NAME </p><textarea id="inputarea"  cols= 40 rows= 1 placeholder="Last name, First Name, Middle Initial"></textarea>
+			<br><p class="label">*CONTACT EMAIL </p><textarea id="inputarea" cols= 40 rows= 1 placeholder="Enter Your Email Here"></textarea>
+			<br><p class="label">*CONTACT NUMBER </p><textarea id="inputarea" cols= 40 rows= 1 placeholder="Enter Your Number Here"></textarea>
+			
+			<center> 
+			<div id="request"><textarea  id="requestform" 
+			cols= 90 rows= 15 placeholder="insert your layout request here *be specific as possible*" ></textarea></div>
+			<div id="request"><textarea  id="requestform" 
+			cols= 90 rows= 15 placeholder="insert your song requests or playlists here *be specific as possible*"></textarea></div>
+			
+			<a href="index.html"><button id="sendsvc">SEND</button></a></center>
+			
+			</div>
+			
+	
+		<div class="navcontfooter">
+			<center>
+			<ul>
+				<li><a href="services.html"><img src="./images/servicesbtn.png" width=50px height=50px></a></li>
+				<li><a href="sources.html"><img src="./images/sourcesbtn.png"width=50px height=50px></a></li>
+				<li><a href="index.html"><img src="./images/homebtn.png"width=50px height=50px></a></li>
+				<li><a href="aboutus.html"><img src="./images/abubtn.png"width=50px height=50px></a></li>
+				<li><a href="forum.html"><img src="./images/forumbtn.png"width=50px height=50px></a></li></ul> </center></div>
+				
+		<div class="footer"> 
+		<center>
+		
+		<b class="copyright">Copyright 2023 by Alvin D.</b><br>
+		<p class="contact">for more info: contact this number:<b id="contact">0922xxxxxx</b></p>
+		<p class="contact">or send an email through: <b id="contact">xxxx@gmail.com</b></p>
+		</center>
+		</div>
+		
+</div>
+</body>
+
+</html>

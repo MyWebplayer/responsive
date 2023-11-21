@@ -1,0 +1,5 @@
+ADDED FEATURES: NOVEMBER 20,2023
+
+-responsive website added to devices with maximum width of 600px
+-added few music in library;
+-added veiwing counter
